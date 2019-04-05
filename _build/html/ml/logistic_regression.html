@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="About" href="../etc/about.html" />
+    <link rel="next" title="Spinning Up Exercises" href="../rl/spinningup_exercises.html" />
     <link rel="prev" title="Welcome to Rheza’s Notes!" href="../index.html" /> 
 </head>
 
@@ -90,6 +90,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#generalizing-to-multi-class-with-softmax">Generalizing to multi-class with softmax</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Reinforcement Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rl/spinningup_exercises.html">Spinning Up Exercises</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Etc.</span></p>
 <ul>
@@ -231,7 +235,7 @@ l(h(x),y) = 1 \quad \text{if } y \neq h(x)\end{split}\]</div>
 &amp;= - \sum\limits_{i=1}^{N} y_i log(p(y_i=1|x_i)) + (1-y_i)log(p(y_i=0|x_i) \\
 &amp;= - \sum\limits_{i=1}^{N} y_i log(\sigma(w\cdot x_i)) + (1-y_i)log(1-\sigma(w\cdot x_i))\end{split}\]</div>
 <div class="figure align-center" id="id1">
-<img alt="ml/../images/logreg_surrogate.png" src="ml/../images/logreg_surrogate.png" />
+<img alt="../_images/logreg_surrogate.png" src="../_images/logreg_surrogate.png" />
 <p class="caption"><span class="caption-text">Comparison of the surrogate loss, the original loss, and square error loss (Shakhnarovich, Slide 7, 2018)</span></p>
 </div>
 <p>Notice that although the expression looks complicated, it’s actually quite simple. For each training example, we want to add the log likelihood of the label <span class="math notranslate nohighlight">\(y_i\)</span> given the observation <span class="math notranslate nohighlight">\(x_i\)</span>. The expressions <span class="math notranslate nohighlight">\(y_i\)</span> and <span class="math notranslate nohighlight">\((1-y_i)\)</span> effectively act as if statements that respectively say “if <span class="math notranslate nohighlight">\(y_i = 1\)</span>, add <span class="math notranslate nohighlight">\(log p(y_i=1|x_i)\)</span>” and “if <span class="math notranslate nohighlight">\(y_i = 0\)</span>, add <span class="math notranslate nohighlight">\(log p(y_i=0|x)\)</span>.”</p>
@@ -241,7 +245,7 @@ l(h(x),y) = 1 \quad \text{if } y \neq h(x)\end{split}\]</div>
 w^{t+1} &amp;= w^{t} - \eta \nabla_w L(w; x_i, y_i)\end{split}\]</div>
 <p>This learning rule has a nice, intuitive, geometric interpretation. Notice that geometrically, <span class="math notranslate nohighlight">\(w\)</span> represents the normal vector of the decision boundary (in the direction of training examples with <span class="math notranslate nohighlight">\(y_i = 1\)</span>).</p>
 <div class="figure align-center" id="id2">
-<img alt="ml/../images/logreg_geometry.png" src="ml/../images/logreg_geometry.png" />
+<img alt="../_images/logreg_geometry.png" src="../_images/logreg_geometry.png" />
 <p class="caption"><span class="caption-text">(Shakhnarovich, Slide 7, 2018)</span></p>
 </div>
 <p>Suppose we’re doing an update based on a single training example <span class="math notranslate nohighlight">\(x_i\)</span> with <span class="math notranslate nohighlight">\(y_i=1\)</span>. So the update equation is given by <span class="math notranslate nohighlight">\(w^{t+1} = w^{t} + [1-\sigma(w\cdot x_i)]x_i\)</span>. Since <span class="math notranslate nohighlight">\(0 &lt; \sigma(w\cdot x_i) &lt; 1\)</span>, the above update always adds a scaled version of <span class="math notranslate nohighlight">\(x_i\)</span> to <span class="math notranslate nohighlight">\(w\)</span>. This has the effect of “pulling” <span class="math notranslate nohighlight">\(w\)</span> towards <span class="math notranslate nohighlight">\(x_i\)</span> by some force. The magnitude of the force depends on how well the classifier currently classifies <span class="math notranslate nohighlight">\(x_i\)</span>. Consider the two extremes. If our classifier is doing very well, that is <span class="math notranslate nohighlight">\(\sigma(w\cdot x_i)\)</span> is close to 1, <span class="math notranslate nohighlight">\(x_i\)</span> hardly pulls on <span class="math notranslate nohighlight">\(w\)</span>. If our classifier is doing very poorly, that is <span class="math notranslate nohighlight">\(\sigma(w\cdot x_i)\)</span> is close to 0, <span class="math notranslate nohighlight">\(x_i\)</span> pulls very hard on <span class="math notranslate nohighlight">\(w\)</span>. Updates based on training examples with with <span class="math notranslate nohighlight">\(y_i = 0\)</span> “push” <span class="math notranslate nohighlight">\(w\)</span> instead of pulling it. Quick sanity check: how will the magnitude of the push depend on <span class="math notranslate nohighlight">\(\sigma(w\cdot x_i)\)</span> when <span class="math notranslate nohighlight">\(y_i = 0\)</span>?</p>
@@ -273,7 +277,7 @@ w^{t+1} &amp;= w^{t} - \eta \nabla_w L(w; x_i, y_i)\end{split}\]</div>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../etc/about.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../rl/spinningup_exercises.html" class="btn btn-neutral float-right" title="Spinning Up Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Rheza’s Notes!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

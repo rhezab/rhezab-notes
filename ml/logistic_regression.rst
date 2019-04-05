@@ -87,7 +87,7 @@ It is computationally infeasible to directly minimise 0/1 loss so we instead emp
 	&= - \sum\limits_{i=1}^{N} y_i log(p(y_i=1|x_i)) + (1-y_i)log(p(y_i=0|x_i) \\
 	&= - \sum\limits_{i=1}^{N} y_i log(\sigma(w\cdot x_i)) + (1-y_i)log(1-\sigma(w\cdot x_i))
 
-.. figure:: ../images/logreg_surrogate.png
+.. figure:: ./images/logreg_surrogate.png
 	:align: center
 
 	Comparison of the surrogate loss, the original loss, and square error loss (Shakhnarovich, Slide 7, 2018)
@@ -102,7 +102,7 @@ Now that we have this surrogate loss in place, we can derive a gradient-based le
 
 This learning rule has a nice, intuitive, geometric interpretation. Notice that geometrically, :math:`w` represents the normal vector of the decision boundary (in the direction of training examples with :math:`y_i = 1`). 
 
-.. figure:: ../images/logreg_geometry.png
+.. figure:: ./images/logreg_geometry.png
 	:align: center
 
 	(Shakhnarovich, Slide 7, 2018)

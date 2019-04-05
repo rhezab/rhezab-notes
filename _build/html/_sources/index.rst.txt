@@ -20,6 +20,12 @@ Welcome to Rheza's Notes!
     dl/backprop
 
 .. toctree::
+	:maxdepth: 1
+	:caption: Reinforcement Learning
+
+	rl/spinningup_exercises
+
+.. toctree::
     :maxdepth: 1
     :caption: Etc.
 

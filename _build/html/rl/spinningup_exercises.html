@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>About &mdash; Rheza&#39;s Notes 2019 documentation</title>
+  <title>Spinning Up Exercises &mdash; Rheza&#39;s Notes 2019 documentation</title>
   
 
   
@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="About" href="../etc/about.html" />
     <link rel="prev" title="Logistic Regression" href="../ml/logistic_regression.html" /> 
 </head>
 
@@ -84,9 +85,17 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ml/logistic_regression.html">Logistic Regression</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Etc.</span></p>
+<p class="caption"><span class="caption-text">Reinforcement Learning</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">About</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Spinning Up Exercises</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#p-set-1-basics-of-implementation">P-Set 1: Basics of Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#p-set-2-algorithm-failure-modes">P-Set 2: Algorithm Failure Modes</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Etc.</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/about.html">About</a></li>
 </ul>
 
             
@@ -132,13 +141,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>About</li>
+      <li>Spinning Up Exercises</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/etc/about.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/rl/spinningup_exercises.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -151,10 +160,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="about">
-<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
-<p>Hi :) Email me at <a class="reference external" href="mailto:rheza&#37;&#52;&#48;uchicago&#46;edu">rheza<span>&#64;</span>uchicago<span>&#46;</span>edu</a> if you want to talk.</p>
-<p><a class="reference external" href="https://rhezab.github.io/projects/">Here are a few projects I’ve done</a></p>
+  <div class="section" id="spinning-up-exercises">
+<h1>Spinning Up Exercises<a class="headerlink" href="#spinning-up-exercises" title="Permalink to this headline">¶</a></h1>
+<p>Documenting solutions as I work through <a class="reference external" href="https://spinningup.openai.com/en/latest/spinningup/exercises.html">Open AI’s Spinning Up exercises.</a> I won’t be writing down every detail of every solution, but rather what I see as the key insights to each exercise. If you’re reading this, I’d really appreciate corrections and/or improvements.</p>
+<div class="section" id="p-set-1-basics-of-implementation">
+<h2>P-Set 1: Basics of Implementation<a class="headerlink" href="#p-set-1-basics-of-implementation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-exercise-1-1-gaussian-log-likelihood admonition">
+<p class="first admonition-title">Exercise 1.1: Gaussian Log-Likelihood</p>
+<ul class="last simple">
+<li>Key is to realise that a diagonal multivariate Gaussian is just a univariate Gaussian along each component</li>
+<li>Since each component is independent, we can treat the probability of an n-dim obervation as the product of the probability of each component</li>
+<li>Calculate component-wise before summing to potentially make use of parallelism</li>
+</ul>
+</div>
+<div class="admonition-exercise-1-2-policy-for-ppo admonition">
+<p class="first admonition-title">Exercise 1.2: Policy for PPO</p>
+<ul class="last simple">
+<li>Just need to get familiar with TF API</li>
+<li>MLP solves regression problem of input state to mean action of Gaussian</li>
+</ul>
+</div>
+</div>
+<div class="section" id="p-set-2-algorithm-failure-modes">
+<h2>P-Set 2: Algorithm Failure Modes<a class="headerlink" href="#p-set-2-algorithm-failure-modes" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-exercise-2-1-value-function-fitting-in-trpo admonition">
+<p class="first admonition-title">Exercise 2.1: Value Function Fitting in TRPO</p>
+<ul class="last simple">
+<li>TRPO is an advantage-based function (advantage is how much better off you are doing action a given state s compared to the average over all possible actions a’)</li>
+<li>Therefore it makes sense that training your value-function would help TRPO do well</li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -164,6 +200,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../etc/about.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../ml/logistic_regression.html" class="btn btn-neutral float-left" title="Logistic Regression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
