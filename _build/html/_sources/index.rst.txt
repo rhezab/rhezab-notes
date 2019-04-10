@@ -12,24 +12,29 @@ Welcome to Rheza's Notes!
 
     ml/logistic_regression
 
+
+..  .. toctree::
+     :maxdepth: 2
+     :caption: Deep Learning
+
+      dl/info_theory
+      dl/backprop
+
+
 .. toctree::
-   :maxdepth: 1
-   :caption: Deep Learning
+    :maxdepth: 1
+    :caption: Reinforcement Learning
 
-    dl/info_theory
-    dl/backprop
+    rl/spinningup_exercises
+    rl/ddpg
 
-.. toctree::
-	:maxdepth: 1
-	:caption: Reinforcement Learning
-
-	rl/spinningup_exercises
 
 .. toctree::
     :maxdepth: 1
     :caption: Etc.
 
     etc/about
+    etc/quotes
 
 
 Indices and tables

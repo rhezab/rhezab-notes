@@ -162,7 +162,7 @@
             
   <div class="section" id="spinning-up-exercises">
 <h1>Spinning Up Exercises<a class="headerlink" href="#spinning-up-exercises" title="Permalink to this headline">¶</a></h1>
-<p>Documenting solutions as I work through <a class="reference external" href="https://spinningup.openai.com/en/latest/spinningup/exercises.html">Open AI’s Spinning Up exercises.</a> I won’t be writing down every detail of every solution, but rather what I see as the key insights to each exercise. If you’re reading this, I’d really appreciate corrections and/or improvements.</p>
+<p>Documenting solutions as I work through <a class="reference external" href="https://spinningup.openai.com/en/latest/spinningup/exercises.html">Open AI’s Spinning Up exercises.</a> I won’t be writing down every detail of every solution, but rather what I see as the key insights to each exercise. I couldn’t do some of the exercises without checking the solutions.</p>
 <div class="section" id="p-set-1-basics-of-implementation">
 <h2>P-Set 1: Basics of Implementation<a class="headerlink" href="#p-set-1-basics-of-implementation" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-exercise-1-1-gaussian-log-likelihood admonition">
@@ -188,6 +188,14 @@
 <ul class="last simple">
 <li>TRPO is an advantage-based function (advantage is how much better off you are doing action a given state s compared to the average over all possible actions a’)</li>
 <li>Therefore it makes sense that training your value-function would help TRPO do well</li>
+</ul>
+</div>
+<div class="admonition-exercise-2-2-silent-bug-in-ddpg admonition">
+<p class="first admonition-title">Exercise 2.2: Silent Bug in DDPG</p>
+<ul class="last simple">
+<li>It is a tensor shape error</li>
+<li>Should squeeze scalar-output MLPs so that they have shape [batch_size] instead of [batch_size, 1] since we’ll later be performing ops with shape [batch_size]</li>
+<li>Weird things happen when you trying adding/multiplying tensors of shape [a] with shape [a,1] (not what we want here)</li>
 </ul>
 </div>
 </div>

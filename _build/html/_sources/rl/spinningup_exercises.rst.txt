@@ -2,7 +2,7 @@
 Spinning Up Exercises
 =====================
 
-Documenting solutions as I work through `Open AI's Spinning Up exercises. <https://spinningup.openai.com/en/latest/spinningup/exercises.html>`_ I won't be writing down every detail of every solution, but rather what I see as the key insights to each exercise. If you're reading this, I'd really appreciate corrections and/or improvements. 
+Documenting solutions as I work through `Open AI's Spinning Up exercises. <https://spinningup.openai.com/en/latest/spinningup/exercises.html>`_ I won't be writing down every detail of every solution, but rather what I see as the key insights to each exercise. I couldn't do some of the exercises without checking the solutions. 
 
 P-Set 1: Basics of Implementation
 =================================
@@ -25,4 +25,10 @@ P-Set 2: Algorithm Failure Modes
 
     - TRPO is an advantage-based function (advantage is how much better off you are doing action a given state s compared to the average over all possible actions a')
     - Therefore it makes sense that training your value-function would help TRPO do well
+
+.. admonition:: Exercise 2.2: Silent Bug in DDPG
+
+	- It is a tensor shape error
+	- Should squeeze scalar-output MLPs so that they have shape [batch_size] instead of [batch_size, 1] since we'll later be performing ops with shape [batch_size]
+	- Weird things happen when you trying adding/multiplying tensors of shape [a] with shape [a,1] (not what we want here)
 

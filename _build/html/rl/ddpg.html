@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>About &mdash; Rheza&#39;s Notes 2019 documentation</title>
+  <title>Deep Deterministic Policy Gradient &mdash; Rheza&#39;s Notes 2019 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quotes" href="quotes.html" />
-    <link rel="prev" title="Deep Deterministic Policy Gradient" href="../rl/ddpg.html" /> 
+    <link rel="next" title="About" href="../etc/about.html" />
+    <link rel="prev" title="Spinning Up Exercises" href="spinningup_exercises.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,14 +86,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../ml/logistic_regression.html">Logistic Regression</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Reinforcement Learning</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../rl/spinningup_exercises.html">Spinning Up Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rl/ddpg.html">Deep Deterministic Policy Gradient</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="spinningup_exercises.html">Spinning Up Exercises</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deep Deterministic Policy Gradient</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Etc.</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quotes.html">Quotes</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/quotes.html">Quotes</a></li>
 </ul>
 
             
@@ -139,13 +139,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>About</li>
+      <li>Deep Deterministic Policy Gradient</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/etc/about.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/rl/ddpg.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -158,10 +158,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="about">
-<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
-<p>Hi :) Email me at <a class="reference external" href="mailto:rheza&#37;&#52;&#48;uchicago&#46;edu">rheza<span>&#64;</span>uchicago<span>&#46;</span>edu</a> if you want to talk.</p>
-<p><a class="reference external" href="https://rhezab.github.io/projects/">Here are a few projects I’ve done.</a></p>
+  <div class="section" id="deep-deterministic-policy-gradient">
+<h1>Deep Deterministic Policy Gradient<a class="headerlink" href="#deep-deterministic-policy-gradient" title="Permalink to this headline">¶</a></h1>
+<p>Pseudo-code from <a class="reference external" href="https://spinningup.openai.com/en/latest/algorithms/ddpg.html#">Spinning Up</a>, and accompanying comments for future review. DDPG is an algorithm, specifically adapted for continous action spaces, for learning a Q-function and a corresponding deterministic policy.</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/ddpg_pseudocode.svg" src="../_images/ddpg_pseudocode.svg" /><p class="caption"><span class="caption-text">(Deep Deterministic Policy Gradient, Spinning Up, Open AI)</span></p>
+</div>
+<ul class="simple">
+<li><strong>Idea:</strong> We interleave learning a Q-function with learning a policy to “boostrap” us off the ground.</li>
+<li><strong>Line 2:</strong> Target parameters are essentially copies of previous parameters. They’re kept to prevent potential instability in the gradient update on line 13. If the “target” had the same parameters, a possible failure mode might be that we fit the “target” to our Q-function rather than the other way around.</li>
+<li><strong>Line 4:</strong> Noise is added the policy at train-time to maintain exploration</li>
+<li><strong>Line 7:</strong> We maintain a replay buffer in order to stop the Q-function from forgetting how to judge “bad” off-policy states and actions - forgetting such “bad” states can cause the policy to repeat “bad” actions.</li>
+<li><strong>Line 14:</strong> This is the line that makes DDPG specifically adapted for continous action spaces. The idea is that we want to solve <span class="math notranslate nohighlight">\(a^{*}(s) = argmax_{a} Q(s,a)\)</span> via gradient ascent since brute force search is clearly intractable for continous action spaces. But instead of doing gradient ascent everytime we want to perform an action, we train a model according to the objective  <span class="math notranslate nohighlight">\(\theta ^ * = max_{\theta} Q(s,a)\)</span>.</li>
+<li><strong>Line 15:</strong> In practice, <span class="math notranslate nohighlight">\(\rho\)</span> is often very close to 0</li>
+</ul>
 </div>
 
 
@@ -172,10 +182,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="quotes.html" class="btn btn-neutral float-right" title="Quotes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../etc/about.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../rl/ddpg.html" class="btn btn-neutral float-left" title="Deep Deterministic Policy Gradient" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="spinningup_exercises.html" class="btn btn-neutral float-left" title="Spinning Up Exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
