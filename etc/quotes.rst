@@ -8,6 +8,7 @@ For your reading pleasure:
 
 - I try to distill each quote down to their essence, but punch lines often ring empty without context. If a punch line tickles you, it's probably worth looking up the context.
 - I try to arrange the quotes in a way that makes sense to me. Roughly, I try to start with "fundamental" life stuff and work my way down to day-to-day rules of thumb.
+- I acknowledge the disconcerting demographics of this page - nearly all of the quotes come from Western men. 
 
 **Richard Feynman, 'Feynman's Rainbow'**
 
@@ -45,6 +46,10 @@ For your reading pleasure:
 
 	Woman’s drama lies in this conflict between the fundamental claim of every subject, which always posits itself as essential, and the demands of a situation that constitutes her as inessential. 
 
+**Immanuel Kant, 'Grounding for the Metaphysics of Morals' (p. 36)**
+
+	Act in such a way that you treat humanity, whether in your own person or in the person of another, always at the same time as an end and never simply as a means.
+
 **Kishimi and Koga, 'The Courage To Be Disliked' (p. 146, 150)**
 
 	PHILOSOPHER: It’s about community feeling, after all. Concretely speaking, it’s making the switch from attachment to self (self-interest) to concern for others (social-interest) and gaining a sense of community feeling. Three things are needed at this point: “self-acceptance”, “confidence in others”, and “contribution to others.”
@@ -76,6 +81,12 @@ For your reading pleasure:
 **Paul Graham, 'Life is Short'**
 
 	Relentlessly prune bullshit, don't wait to do things that matter, and savor the time you have. That's what you do when life is short.
+
+**'The Serenity Prayer'**
+
+	| God grant me the serenity to accept the things I cannot change,
+	| courage to change the things I can;
+	| and wisdom to know the difference. 
 
 **Michael Lewis, 'The Undoing Project'**
 
@@ -149,7 +160,7 @@ For your reading pleasure:
 
 	Examples confuse me. (Mathematical abstraction can make things clear). 
 
-	(Stuff inside brackets is paraphrased).  
+	(Stuff inside parantheses is paraphrased).  
 
 **Charles Townes, 'How the Laser Happenned'**
 

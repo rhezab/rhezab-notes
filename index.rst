@@ -13,12 +13,11 @@ Welcome to Rheza's Notes!
     ml/logistic_regression
 
 
-..  .. toctree::
-     :maxdepth: 2
-     :caption: Deep Learning
+.. toctree::
+    :maxdepth: 1
+    :caption: Deep Learning
 
-      dl/info_theory
-      dl/backprop
+    dl/info_theory
 
 
 .. toctree::
