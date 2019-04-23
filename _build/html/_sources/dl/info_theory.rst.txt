@@ -4,7 +4,9 @@ Information Theory
 
 I was introduced to information theory in David McAllester's `Fundamentals of Deep Learning class <https://mcallester.github.io/ttic-31230/>`_ (which I loved). The slides are good (but terse - you'll need to put in some work). The problems are excellent (in my humble opinion). 
 
-Chirs Olah's `Visual Information Theory <http://colah.github.io/posts/2015-09-Visual-Information/>`_ is what made information theory "click" for me. The optimal coding interpretation of information theory, and the corresponding visualizations, were extremely helpful to my understanding. 
+Chirs Olah's `Visual Information Theory <http://colah.github.io/posts/2015-09-Visual-Information/>`_ is what made information theory "click" for me. The optimal coding interpretation of information theory, and the corresponding visualizations, were extremely helpful to my understanding. The following is a cheat sheet of useful intuitions about definitions in information theory. 
+
+--------
 
 **Entropy.** This is the average code length of the optimal code for a given probability distribution.
 

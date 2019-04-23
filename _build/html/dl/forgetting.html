@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Catastrophic Forgetting &mdash; Rheza&#39;s Notes 2019 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Computational Psychiatry" href="../rl/comp_psych.html" />
+    <link rel="prev" title="Information Theory" href="info_theory.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rheza's Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Intro Machine Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ml/logistic_regression.html">Logistic Regression</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Deep Learning</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="info_theory.html">Information Theory</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Catastrophic Forgetting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#intro">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weight-stabilistion">Weight Stabilistion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gating">Gating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-interaction-between-xdg-and-stablistion">The interaction between XdG and stablistion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transfer-learning">Transfer Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jumping-off-points">Jumping-off Points</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Reinforcement Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rl/comp_psych.html">Computational Psychiatry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rl/ddpg.html">Deep Deterministic Policy Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rl/spinningup_exercises.html">Spinning Up Exercises</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Etc.</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/quotes.html">Quotes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rheza's Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Catastrophic Forgetting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/dl/forgetting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="catastrophic-forgetting">
+<h1>Catastrophic Forgetting<a class="headerlink" href="#catastrophic-forgetting" title="Permalink to this headline">¶</a></h1>
+<p>A summary of* <a class="reference external" href="https://arxiv.org/pdf/1802.01569.pdf">Alleviating Catastrophic Forgetting Using Context-Dependent Gating and Synaptic Stabilisation</a> (Masse, Grant, Freedman). With my interpretations and thoughts sprinkled in. Jumping-off points are written as footnotes.</p>
+<hr class="docutils" />
+<div class="section" id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<p>Without additional measures, neural networks are pretty bad at <em>continual learning</em> - the ability to learn new tasks without forgetting how to do previously learned tasks. This failure to continually learn is what we call <em>catastrophic forgetting</em>.</p>
+<p>Catastrophic forgetting occurs because as a neural net learns a second task, its parameters move towards the optimum for the second task - and thus away from the optimum for the first task. This problem gets even worse as you learn more and more tasks.</p>
+<p>One moderately successful remedy is weight stabilisation. The idea is that when learning a new task, you want to constrain parameter change in order to minimise the forgetting of previous tasks. Furthermore, you want to constrain important parameters more (important to previous tasks). The figure below shows the success of two stabilisation techniques at alleviating forgetting on the permuted MNIST task (the two techniques will be expounded on later).</p>
+<div class="figure align-center" id="id9">
+<img alt="../_images/forgetting_stabilisation.png" src="../_images/forgetting_stabilisation.png" />
+<p class="caption"><span class="caption-text">Figure 2A in the paper.</span></p>
+</div>
+<div class="admonition-pmnist admonition">
+<p class="first admonition-title">pMNIST</p>
+<p class="last">Permuted MNIST (pMNIST) is an example of a “input reformatting” problem. Sequential learning is tested on identical input/output semantics, but changing input format. In pMNIST, the image pixel intensities (input semantics) and digit labels (output semantics) are kept the same, but the pixel locations (input format) are changed. Specifically, each new task has a fixed permutation that is applied to all input images.</p>
+</div>
+<p>The innovation presented by the paper is to pair weight stabilistion with context-dependent gating (XdG). In XdG, the neural network uses (randomly sampled, potentially overlapping) subsets of the neural network for each task. The idea is that we want to ease the burden on parameters - each parameter is now responsible for learning fewer tasks, and thus doesn’t move as much from its last position (after learning the most recent task). The pairing of stabilisation and XdG results in a breakthrough in alleviating forgetting, as you can see in the figure below.</p>
+<div class="figure align-center" id="id10">
+<img alt="../_images/forgetting_xdg.png" src="../_images/forgetting_xdg.png" />
+<p class="caption"><span class="caption-text">Figure 2D in the paper.</span></p>
+</div>
+<p>With the efficacy of the method established, we turn to understanding each remedy individually and how they combine.</p>
+</div>
+<div class="section" id="weight-stabilistion">
+<h2>Weight Stabilistion<a class="headerlink" href="#weight-stabilistion" title="Permalink to this headline">¶</a></h2>
+<p>Weight stabilisation can be thought of as a form of regularisation that penalises moving away from previous parameters. Moreover, moving away from important parameters is punished more heavily than moving away from less important parameters. Mathematically, we add a penalty like so:</p>
+<div class="math notranslate nohighlight">
+\[L = L_k + c \sum \limits_{i} \Omega _i (\theta_i - \theta_i^{\text{prev}})^2\]</div>
+<div class="admonition-notation admonition">
+<p class="first admonition-title">Notation</p>
+<ul class="last simple">
+<li><span class="math notranslate nohighlight">\(L_k\)</span> is the unstabilised loss while learning task <span class="math notranslate nohighlight">\(k\)</span></li>
+<li><span class="math notranslate nohighlight">\(\theta_i\)</span> is parameter <span class="math notranslate nohighlight">\(i\)</span></li>
+<li><span class="math notranslate nohighlight">\(c\)</span> is a scaling hyper-parameter</li>
+<li><span class="math notranslate nohighlight">\(\Omega _i\)</span> is the “importance” of parameter <span class="math notranslate nohighlight">\(i\)</span> to previously learned tasks</li>
+</ul>
+</div>
+<p>How is <span class="math notranslate nohighlight">\(\Omega_i\)</span> computed? Firstly, the importance of <span class="math notranslate nohighlight">\(\theta_i\)</span> to each previous task is simply summed to form its total importance to all previous tasks. Assuming we’re currently learning task <span class="math notranslate nohighlight">\(k\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\Omega_i = \sum\limits_{m &lt; k} \Omega _{i}^{k}\]</div>
+<p>Now, there are different ways to define <span class="math notranslate nohighlight">\(\Omega _{i}^{k}\)</span>, the “importance” of parameter <span class="math notranslate nohighlight">\(i\)</span> to task <span class="math notranslate nohighlight">\(k\)</span>. This paper uses two different methods - elastic weight consolidation (EWC) and synaptic intelligence (SI).</p>
+<p><strong>Elastic weight consolidation (EWC)</strong> defines importance as:</p>
+<div class="math notranslate nohighlight">
+\[\Omega_{i}^{k} = E_{X\sim D^k, y\sim P_{\theta}(y|x)} \Big(\frac{\partial log p_{\theta_i}(y|x)}{\partial \theta_i} \Big)^2\]</div>
+<p>That is, we take the diagonal elements of the Fisher Information matrix:</p>
+<div class="math notranslate nohighlight">
+\[F = E_{X\sim D^k, y\sim P_{\theta}(y|x)} \Big(\frac{\partial log p_{\theta_i}(y|x)}{\partial \theta_i} \Big)^2\]</div>
+<div class="admonition-notation admonition">
+<p class="first admonition-title">Notation</p>
+<ul class="last simple">
+<li><span class="math notranslate nohighlight">\(D^k\)</span> is the input data for task <span class="math notranslate nohighlight">\(k\)</span></li>
+<li><span class="math notranslate nohighlight">\(p_{\theta_i}(y|x)\)</span> is the output distribution defined by the neural net</li>
+</ul>
+</div>
+<p>This definition of “importance” bears an intuitive interpretation. If slightly perturbing a parameter results in a significant change in the output distribution, that parameter is important to maintaining the output distribution (and thus not forgetting it). <a class="footnote-reference" href="#id5" id="id1">[1]</a></p>
+<p><strong>Synaptic intelligence (SI)</strong> defines importance as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Omega^{k}_{i} &amp;= max \Big( 0, \frac{w^{k}_{i}}{(\Delta \theta_i)^2 + \xi} \Big) \\
+\Delta \theta_i &amp;= \sum\limits_{t} (\theta_i (t) - \theta_i (t-1)) \\
+w_i^k &amp;= \sum\limits_{t} (\theta_i (t) - \theta_i (t-1)) \cdot - \frac{\partial L_k(t) }{\partial \theta_i (t)}\end{split}\]</div>
+<div class="admonition-notation admonition">
+<p class="first admonition-title">Notation</p>
+<ul class="last simple">
+<li><span class="math notranslate nohighlight">\((\Delta \theta_i)^2\)</span> is the normalising term</li>
+<li><span class="math notranslate nohighlight">\(\xi\)</span> is the damping hyper-parameter</li>
+<li><span class="math notranslate nohighlight">\(t\)</span> here refers to batch number (within training for a single task)</li>
+</ul>
+</div>
+<p>This definition of importance needs a little more unpacking than EWC. Let’s start by inspecting <span class="math notranslate nohighlight">\(w_{i}^{k}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((\theta_i (t) - \theta_i (t-1))\)</span> represents the direction (sign) and magnitude of the parameter change. But since this term will get normalised anyways, only the direction of the change really matters.</p>
+<p><span class="math notranslate nohighlight">\(- \frac{\partial L_k(t) }{\partial \theta_i(t)}\)</span> is meaningful both in direction and magnitude. As long as we’re not at a local extremum, its direction indicates which way to go from <span class="math notranslate nohighlight">\(\theta_i(t)\)</span> in order to locally decrease loss. Its magnitude tells us how much a small step in that direction will decrease the loss.</p>
+<p>It’s important to realise that <span class="math notranslate nohighlight">\((\theta_i (t) - \theta_i (t-1))\)</span> represents the parameter change from the just-completed batch, while <span class="math notranslate nohighlight">\(- \frac{\partial L_k(t) }{\partial \theta_i(t)}\)</span> roughly represents the desired parameter change for the upcoming batch. If their signs disagree, that means that <span class="math notranslate nohighlight">\(\theta_i\)</span> needs to reverse course - meaning that the last parameter change was not useful!</p>
+<p>We can thus interpret <span class="math notranslate nohighlight">\(\Omega^{k}_{i}\)</span> here as capturing how much <span class="math notranslate nohighlight">\(\theta_i\)</span> moved in a useful direction while learning task <span class="math notranslate nohighlight">\(k\)</span>. There seems to be the underlying assumption that if <span class="math notranslate nohighlight">\(\theta_i\)</span> moved a lot in a useful direction while learning task <span class="math notranslate nohighlight">\(k\)</span>, that parameter must be important to task <span class="math notranslate nohighlight">\(k\)</span>. <a class="footnote-reference" href="#id6" id="id2">[2]</a></p>
+</div>
+<div class="section" id="gating">
+<h2>Gating<a class="headerlink" href="#gating" title="Permalink to this headline">¶</a></h2>
+<p>The paper presents a sequence of ideas naturally leading up to context-dependent gating (XdG).</p>
+<p><strong>Context signalling</strong> is the first idea presented. It is motivated by the idea that catastrophic forgetting might partially be the result of the neural net not knowing what context its currently being tested on. So we invent a “context signal,” a one-hot vector encoding what context is currently being tested. The paper says that this one-hot vector is then “projected” onto the hidden layers, and that the weights projecting the context signal onto the hidden layers could be trained by the network. As you can see in Figure 2B below, context signalling combined with stabilisation is an improvement upon stabilisation alone.</p>
+<div class="admonition-question admonition">
+<p class="first admonition-title">Question</p>
+<p class="last">I’m actually not sure what this “projecting” means. I initially thought that projecting meant applying a differentiable context-dependent mask onto the hidden layers, but how can such a mask be applied without training?</p>
+</div>
+<div class="figure align-center" id="id11">
+<img alt="../_images/forgetting_context_signal.png" src="../_images/forgetting_context_signal.png" />
+<p class="caption"><span class="caption-text">Figure 1B in the paper.</span></p>
+</div>
+<div class="figure align-center" id="id12">
+<img alt="../_images/forgetting_2b.png" src="../_images/forgetting_2b.png" />
+<p class="caption"><span class="caption-text">Figure 2B in the paper.</span></p>
+</div>
+<p>The <strong>split network</strong> is motivated by a desire to decrease the number of tasks each parameter is involved in learning. The network is split into five sub-networks with 733 hidden neurons each (so that the total number of weights remains the same). One sub-network is used for each task (with the other hidden neurons zeroed). Choosing the number of sub-networks involves a trade-off between allevating forgetting (more sub-networks) and maintaing representational power per task (less sub-networks, thus more hidden neurons per task). As you can see in Figure 2C below, split networks in combination with context signalling and stabilisation is our best remedy yet.</p>
+<div class="figure align-center" id="id13">
+<img alt="../_images/forgetting_1c.png" src="../_images/forgetting_1c.png" />
+<p class="caption"><span class="caption-text">Figure 1C in the paper.</span></p>
+</div>
+<div class="figure align-center" id="id14">
+<img alt="../_images/forgetting_2c.png" src="../_images/forgetting_2c.png" />
+<p class="caption"><span class="caption-text">Figure 2C in the paper.</span></p>
+</div>
+<p><strong>Context-dependent gating (XdG)</strong> assigns unique (potentially overlapping) sub-networks for each task. It does this by gating (i.e. zeroing) <span class="math notranslate nohighlight">\(X\%\)</span> of hidden neurons, randomly chosen for each task. <a class="footnote-reference" href="#id7" id="id3">[3]</a> In the paper, <span class="math notranslate nohighlight">\(X=80\)</span> to allow fair comparison with the split network. Again, the choice of <span class="math notranslate nohighlight">\(X\)</span> is a trade-off between alleviating forgetting via keeping more weights fixed, and maintaing per-task representational power by keeping more hidden neurons active. XdG combined with stabilisation gives the best results yet. Interestingly, XdG only works when combined with stabilisation…</p>
+<div class="figure align-center" id="id15">
+<img alt="../_images/forgetting_1d.png" src="../_images/forgetting_1d.png" />
+<p class="caption"><span class="caption-text">Figure 1D in the paper.</span></p>
+</div>
+<div class="figure align-center" id="id16">
+<img alt="../_images/forgetting_2d.png" src="../_images/forgetting_2d.png" />
+<p class="caption"><span class="caption-text">Figure 2D in the paper.</span></p>
+</div>
+<p>The paper shows that the XdG and stabilisation method works on two other tasks. The first task was sequential learning of ImageNet (the network learned 10-class subsets of 1000 total classes). The second task was a series of eye saccade tasks. Notably, XdG and stabilisation successfully alleviated forgetting on a network trained using RL (to perform the second task).</p>
+</div>
+<div class="section" id="the-interaction-between-xdg-and-stablistion">
+<h2>The interaction between XdG and stablistion<a class="headerlink" href="#the-interaction-between-xdg-and-stablistion" title="Permalink to this headline">¶</a></h2>
+<p>This is my favorite part of the paper, where the authors try to understand why XdG combined with stabilisation works better than stabilisation alone. They do this by making a series of hypotheses, and testing them empircally - science!</p>
+<p>The core argument is “that to accurately learn many sequential tasks with little forgetting, the network must balance two competing demands:”</p>
+<ol class="arabic simple">
+<li>“it must stabilise synpases that are deemed important for previous tasks”</li>
+<li>“yet remain flexible so that it can adjust synaptic values by a sufficient amount to accurately learn new tasks.”</li>
+</ol>
+<p>The importance of the first demand, stabilising important weights, was empirically tested via an experiment in which individual weights in a trained network are perturbed by a fixed amount and the corresponding change in accuracy is measured. As expected, the authors found a strong negative correlation between the synaptic importance of the perturbed weight and the corresponding change in accuracy (R = -0.904).</p>
+<div class="figure align-center" id="id17">
+<img alt="../_images/forgetting_3a.png" src="../_images/forgetting_3a.png" />
+<p class="caption"><span class="caption-text">Figure 3A in the paper.</span></p>
+</div>
+<p>The importance of the second demand, allowing weights to change sufficiently, was shown by plotting distance moved in parameter space while learning a new task, and the accuracy achieved on that task. Recall that the importance of a parameter is summed over all previous tasks, so the importance of a parameter accumulates as it is involved in more tasks.</p>
+<div class="figure align-center" id="id18">
+<img alt="../_images/forgetting_3b.png" src="../_images/forgetting_3b.png" />
+<p class="caption"><span class="caption-text">Figure 3B in the paper.</span></p>
+</div>
+<p>So why does XdG help balance these two demands? The authors claim that XdG results in lower mean importance and “having larger number of synapses with low importance.” In turn, this means that low-importance parameters can be adjusted without hurting performance on previous tasks. That is, XdG means that we can fulfill demand two at a lower cost to demand one. This claim is validated by the figure below, from data collected while learning the 100th MNIST permutation. <a class="footnote-reference" href="#id8" id="id4">[4]</a></p>
+<div class="figure align-center" id="id19">
+<img alt="../_images/forgetting_3c-e.png" src="../_images/forgetting_3c-e.png" />
+<p class="caption"><span class="caption-text">Figures 3C-E in the paper. C shows the weights between the input layer and the first hidden layer, D shows the weights between the first and second hidden layers, and E shows the weights between the second hidden layer and the output layer.</span></p>
+</div>
+<div class="admonition-observations-questions-about-figures-3c-e admonition" id="observations">
+<p class="first admonition-title">Observations &amp; Questions about Figures 3C-E</p>
+<ul class="last simple">
+<li>It’s interesting to note the range of the synaptic distance moved plots (right panels). The weights in D move an order of magnitude more than the weights in C, which in turn moves an order of magnitude more than the weights in E. Here’s a guess as to why. The weights in C are less task-specific than the weights in D because the first hidden layer should encode basic features such as edges. The weights in D are the most task-specific because they encode geometric shapes that are combinations of building blocks such as edges. The weights in E are the least task-specific because presumably its easier to change the hidden layer features than to change the combnination of features since the features are so task-specific? I’m really not sure though, this is a really kooky guess…</li>
+<li>The peaks are interesting to note too. In Figure C, the peaks on the left and right panels are almost identically located. I guess this is because high-intensity pixels tend to cluster near the center of images of digits. In Figure D, we see that the green peak on the right panel is very far away from the green peak. I guess this is because the network has some liberty as to which neuron encodes what features and there’s redundancy amongst the features learned in the first hidden layer.</li>
+<li>Why does there seem to be more weights with non-zero importance when XdG is used? One guess is that the reduced number of parameters per-task means each parameter is more “needed.”</li>
+</ul>
+</div>
+</div>
+<div class="section" id="transfer-learning">
+<h2>Transfer Learning<a class="headerlink" href="#transfer-learning" title="Permalink to this headline">¶</a></h2>
+<p>The paper suggests that gating can be used to facilitate transfer learning. Instead of re-training a neural net to perform a new task, we can train a gating function to combine sub-networks in order to perform the new task.</p>
+<p>The underlying assumption here is that there exist sub-networks which learn composable concepts. It’s certainly reasonable to think that we can design networks to learn composable concepts. For instance, it’s been shown that <a class="reference external" href="https://distill.pub/2017/aia/">auto-encoders have structured latent-spaces</a>. <a class="reference external" href="https://distill.pub/2018/building-blocks/">Convolutional nets seem to build concepts up compositionally</a>. And of course, word embeddings have ‘king’ - ‘man’ + ‘woman’ = ‘queen’. One can imagine teaching a CNN to classify zebras if it’s learned to classify horses (‘zebra’ = ‘horse’ + ‘stripes’).</p>
+<p>The authors identify three opportunities to make progress on transfer learning:</p>
+<ol class="arabic simple">
+<li>Algorithms for identifying what “network modules,” or sub-networks, are useful for a new tasks (and how to combine them).</li>
+<li>Algorithms for identifying the current context, and performing gating accordingly.</li>
+<li>Networks that represent learned information in a modular manner.</li>
+</ol>
+</div>
+<div class="section" id="jumping-off-points">
+<h2>Jumping-off Points<a class="headerlink" href="#jumping-off-points" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The point of EWC seems to be to minimise the shift of the output distribution <span class="math notranslate nohighlight">\(p_{\theta}(y|x)\)</span> - so can we instead use a KL-divergence penalty such as <span class="math notranslate nohighlight">\(KL(p_{\theta_{t}}(y|x), p_{\theta_{t+1}}(y|x))\)</span>? Can we phrase other ideas presented in this paper in an information theoretic manner?</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Why does SI work better than EWC? To me, EWC seems better justified than SI . The underlying assumption behind SI seems iffy. Yes, if a parameter needs to be changed a lot in order to perform a task, it must be important to doing that task well. But what if we have an already-learned parameter which is also important for the current task? For example, weights in a CNN that act as edge detectors seem useful for any visual task.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>Is XdG related to dropout? They both seem intended at distributing representational power. They both seem to be mixtures of experts where experts share paremeters. They differ in how they combine experts. XdG uses only one expert at a time, since contexts are discrete and are observed with total certainty. On the other hand, dropout assumes total ignorance about the context (and context refers to batch-wise distribution). That is, dropout always gives equal weight to each expert. I’m not sure how insightful this observation is, but it seems interesting… Reading into the literature on mixture models seems relevant to the problem of applying XdG to transfer learning.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>But why are there more low-importance weights? The obvious reason is that each parameter is now involved in learning fewer tasks - so each parameter accumulates importance at a slower rate. But this is also true for split networks, and XdG is better than split networks, so there there’s more work to be done in explaining why XdG is so successful…</td></tr>
+</tbody>
+</table>
+<p><strong>Some more jumping-off points:</strong></p>
+<ul class="simple">
+<li>Can we explain these <a class="reference internal" href="#observations">observations</a> about Figures 3C-E?</li>
+<li>The methods of parameter importance used in EWC and SI seem applicable to feature attribution. It’d be interesting to try these methods of feature attribution in combination with feature visualisation, as presented in <a class="reference external" href="https://distill.pub/2018/building-blocks">Building Blocks</a> Moreover, feature visualisation can help us better understand why XdG and stabilisation works. For instance, we can visually compare neurons with lower mean importance to neurons with higher mean importance.</li>
+<li>And of course, applying gating to transfer learning…</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../rl/comp_psych.html" class="btn btn-neutral float-right" title="Computational Psychiatry" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="info_theory.html" class="btn btn-neutral float-left" title="Information Theory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Rheza Budiono
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

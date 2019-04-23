@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Computational Psychiatry &mdash; Rheza&#39;s Notes 2019 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Deep Deterministic Policy Gradient" href="ddpg.html" />
+    <link rel="prev" title="Catastrophic Forgetting" href="../dl/forgetting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rheza's Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Intro Machine Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ml/logistic_regression.html">Logistic Regression</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Deep Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dl/info_theory.html">Information Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dl/forgetting.html">Catastrophic Forgetting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reinforcement Learning</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Computational Psychiatry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ddpg.html">Deep Deterministic Policy Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spinningup_exercises.html">Spinning Up Exercises</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Etc.</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/quotes.html">Quotes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rheza's Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Computational Psychiatry</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/rl/comp_psych.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="computational-psychiatry">
+<h1>Computational Psychiatry<a class="headerlink" href="#computational-psychiatry" title="Permalink to this headline">¶</a></h1>
+<p>This page is a summary of what I’ve learned about computational psychiatry by reading a few papers by <a class="reference external" href="https://quentinhuys.com/">Quentin Huys</a> and his collaborators. The goal is not to cover the details of the methodology, but rather to get a big picture of what computational psychiatry investigates and what the investigation process looks like.</p>
+<hr class="docutils" />
+<p>Computational neuroscience (or sometimes theoretical neuroscience), as I understand it, is concerned with conjecturing and testing mathematical/algorithmic models of natural intelligence. Computational psychiatry uses the methodology of computational neuroscience to study how intelligent agents can go “wrong.”</p>
+<p>The methodologies employed by computational psychiatry (CP) are diagrammed below. <a class="footnote-reference" href="#id2" id="id1">[1]</a></p>
+<div class="figure align-center">
+<img alt="../_images/pc_tree.png" src="../_images/pc_tree.png" />
+</div>
+<p>We’ll be talking about RL models, which are algorithmic models. Within computational psychiatry, RL models typically consist of two parts: <strong>(1)</strong> an RL algorithm capturing internal learning and evaluation and <strong>(2)</strong> a link function which links internal evaluation to actions. RL models in computational psychiatry also typically have a small number of parameters that are neuroscientifically meaningful. These parameters are typically fit to experimental data. Hypotheses regarding these parameters can then be tested - for example, one can test whether dopamine antagonists reduce learning rate.</p>
+<p>In particular, we’ll be talking about the paper <em>Mapping anhedonia onto reinforcement learning: a behavioral meta-analysis</em>. [2] I chose this paper because it seems to encapsulate the entire process: conjecturing models, fitting models, model selection, investigating the parameters of the model, and then relating it all back to neuroscience.</p>
+<p>It’s been experimentally observed that for people subjectively reporting anhedonia, their behaviour is less effected by reward feedback. But we’re not sure why this is - is it because of <strong>(1)</strong> anhedonia, i.e. a reduced internal enjoyment of rewards, or <strong>(2)</strong> reduced dopamine levels, i.e. a reduced ability to learn from reward feedback. Note that in the paper, reason <strong>(1)</strong> is called a reduction in “primary sensitivity” to rewards.</p>
+<p>The difference between primary sensitivity to rewards and ability to learn from rewards is made clear when we consider what they mean in a RL problem. Assume that we want to learn a Q-function <span class="math notranslate nohighlight">\(Q(s,a)\)</span> (which equals expected future reward given state <span class="math notranslate nohighlight">\(s\)</span> and action <span class="math notranslate nohighlight">\(a\)</span>). One way to learn such a Q-function is as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\delta_t(s,a) &amp;= \rho r_t(s,a) - Q_t(s,a) \\
+Q_{t+1}(s,a) &amp;= Q_t (s,a) + \epsilon \delta_t (s,a)\end{split}\]</div>
+<p>In the above equations:</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(\rho\)</span> corresponds to primary sensitivity to reward</li>
+<li><span class="math notranslate nohighlight">\(\epsilon \in [ 0,1 ]\)</span> corresponds to learning rate, i.e. ability to learn from reward. This is physiologically realised as dopamine (DA) signalling; it’s been found that <span class="math notranslate nohighlight">\(DA \propto \delta_t\)</span>. I.e. the effect of dopamine is the control learning rate <span class="math notranslate nohighlight">\(\epsilon\)</span>.</li>
+</ul>
+<p><strong>The question</strong> asked by the paper is if we can use the above Q-learning algorithm to figure out if the reduced behavioural effect of reward feedback in people reporting anhedonia is due to <strong>(1)</strong> reduced primary sensitivity or <strong>(2)</strong> a reduced ability to learn.</p>
+<p><strong>The experimental data</strong> was collected from a binary classification task given to humans from several groups (e.g. suffers from major depressive disorder, administered dopamine antagonist, etc.) The task was to classify a cartoon face as having a “short” or “long” mouth (the face is only shown for 600 ms total, and the mouth is shown for 100 ms). The twist is that the reward schedule is lopsided. Half of the participants are rewarded 75% of the time for correctly classifying long mouths and only 30% of the time for correctly classifying short mouths (vice versa for the other half of participants). The idea is that, in the face of uncertainty, participants should learn a bias for one of the actions.</p>
+<p><strong>The model</strong> used consists of the Q-learning model described above (the RL algo part) and several candidate link functions. All the candidate link functions take the following form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p(a_t | s_t) &amp;= \frac{1}{1+exp [ - (W_t(a_t,s_t) - W_t(a_t', s_t)) ]} \\
+W_t(a_t,s_t) &amp;= \gamma I(a_t, s_t) + \xi Q_t(a_t,s_t) + (1-\xi)Q_t(a_t,s_t')\end{split}\]</div>
+<p>In the above equations:</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(p(a_t | s_t)\)</span> is modelled as a logistic function where the score is based on the relative scores of action <span class="math notranslate nohighlight">\(a_t\)</span> and binary alternative <span class="math notranslate nohighlight">\(a_t'\)</span>.</li>
+<li><span class="math notranslate nohighlight">\(W_t(a_t,s_t)\)</span> is called “weights” in the paper, but I think a better label is simply score function. The higher the value of the function, the better the action being evaluated given current state <span class="math notranslate nohighlight">\(s_t\)</span>.</li>
+<li><span class="math notranslate nohighlight">\(I(a_t, s_t)\)</span> is called the “instruction” in the paper, it is simply an identity function on if <span class="math notranslate nohighlight">\(a_t\)</span> is the correct action given state <span class="math notranslate nohighlight">\(s_t\)</span> (evaluates to 1 if correct, 0 if wrong).</li>
+<li><span class="math notranslate nohighlight">\(\gamma\)</span> corresponds to how much a subject cares about being right</li>
+<li><span class="math notranslate nohighlight">\(\xi Q_t(a_t, s_t) + (1-\xi)Q_t(a_t,s_t')\)</span> corresponds to the expected value of the expected reward - we take an expectation since we’re uncertain if the observed current state <span class="math notranslate nohighlight">\(s_t\)</span> is truly the current state. Hence <span class="math notranslate nohighlight">\(\xi\)</span> corresponds to the probability confidence we assign to our observation of being in state <span class="math notranslate nohighlight">\(s_t\)</span>.</li>
+</ul>
+<p>Using the above framework, we can specify three candidate link functions:</p>
+<ul class="simple">
+<li>In the “Belief” model, <span class="math notranslate nohighlight">\(\xi\)</span> is fitted from the data.</li>
+<li>In the “Stimulus-Action” model, <span class="math notranslate nohighlight">\(\xi = 1\)</span>, i.e. participants are assumed to be certain in their state observations.</li>
+<li>In the “Action” model, <span class="math notranslate nohighlight">\(\xi = 0.5\)</span>, i.e. participants are totally uncertain about state observations.</li>
+</ul>
+<p>In all the above candidate link functions, <span class="math notranslate nohighlight">\(\gamma\)</span> is fit from data. The full set of fitted parameters are <span class="math notranslate nohighlight">\(\{ \gamma, \rho, \epsilon, Q_0 \}\)</span> and additionally <span class="math notranslate nohighlight">\(\xi\)</span> for the “Belief” model.</p>
+<p><strong>The fitting methodology</strong> used is <a class="reference external" href="https://www.dropbox.com/s/rzajexkayvdcl5t/lect15draft.pdf?dl=0">expectation maximisation (EM)</a> I remember sitting in my ML class being very surprised when I learned that EM works - a note on EM is (hopefully) coming.</p>
+<p><strong>Model selection</strong> was done on the group level. We want to know which model best describes a group of participants (e.g. control group, anhedonia group, etc.) It was found that the “Belief” model best describes all groups studied. The model comparison technique used was Bayesian Model Comparison - a technique that balances fit and complexity by computing posterior proabilities for models. Unfortunately, I don’t know much more. The paper contains more details. This may be a topic for a future note.</p>
+<p><strong>The findings</strong> are that there is significant negative correlation between primary sensitivity <span class="math notranslate nohighlight">\(\rho\)</span> and measures of anhedonic depression (AD), and no significant correlation between learning rate <span class="math notranslate nohighlight">\(\epsilon\)</span> and AD. Additionally, it was found that administering a dopamine antagonist had the opposite effect - it reduced <span class="math notranslate nohighlight">\(\epsilon\)</span> but did nothing much to <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
+<p><strong>This means that</strong> anhedona affects decisionmaking primarily via reducing primary sensitivity <span class="math notranslate nohighlight">\(\rho\)</span> and not via learning rate <span class="math notranslate nohighlight">\(\epsilon\)</span> (related to dopamine). An obvious clinical application seems to be to decide against administering dopaminegernic treatments for depression. I’ll need to think about slash read into other clinical applications of this conclusion…</p>
+<p><strong>Some lingering questions</strong>, (which I suspect I can answer by delving into the methodology and experimental results):</p>
+<ul class="simple">
+<li>It seems that we can fit <span class="math notranslate nohighlight">\(\rho\)</span> via behavior due to the presence of <span class="math notranslate nohighlight">\(I\)</span> in the score function <span class="math notranslate nohighlight">\(W\)</span>. But what justifies the presence of <span class="math notranslate nohighlight">\(I\)</span>? Why wasn’t a model considered with <span class="math notranslate nohighlight">\(\gamma = 0\)</span> - i.e. ignoring the <span class="math notranslate nohighlight">\(I\)</span> term. Also, can’t <span class="math notranslate nohighlight">\(rho\)</span> be more easily fitted if there was a no-action option with a fixed cost to taking action? Maybe the fixed cost would also be dulled…</li>
+</ul>
+<p>If you found that interesting, other cool papers are <a class="reference external" href="https://quentinhuys.com/pub/HuysRenz17-EmotionMetareasoning.pdf">A Formal Valuation Framework for Emotions and Their Control</a> and <a class="reference external" href="https://quentinhuys.com/pub/HuysEa14-VulnerabilityAddictionDopamine.pdf">The role of learning-related dopamine signals in addiction vulnerability</a>. Also read the summarised papers for more detail.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://quentinhuys.com/pub/HuysEa16-ComputationalPsychiatry.pdf">Computational psychiatry as a bridge from neuroscience to clinical applications</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><a class="reference external" href="https://quentinhuys.com/pub/HuysEa13-MDDMetaAnalysis.pdf">Mapping anhedonia onto reinforcement learning: a behavioural meta-analysis</a></td></tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ddpg.html" class="btn btn-neutral float-right" title="Deep Deterministic Policy Gradient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../dl/forgetting.html" class="btn btn-neutral float-left" title="Catastrophic Forgetting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Rheza Budiono
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

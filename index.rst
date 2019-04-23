@@ -18,14 +18,16 @@ Welcome to Rheza's Notes!
     :caption: Deep Learning
 
     dl/info_theory
+    dl/forgetting
 
 
 .. toctree::
     :maxdepth: 1
     :caption: Reinforcement Learning
 
-    rl/spinningup_exercises
+    rl/comp_psych
     rl/ddpg
+    rl/spinningup_exercises
 
 
 .. toctree::

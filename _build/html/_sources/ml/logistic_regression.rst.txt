@@ -2,7 +2,7 @@
 Logistic Regression
 ===================
 
-In this section we'll learn our first classification model class: logistic regression. As with linear regression, our approach will be to "invent" logistic regression for ourselves. 
+In this section we'll learn our first classification model class: logistic regression. Our approach will be to "invent" logistic regression for ourselves. 
 
 Here's how we'll do that:
 

@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Spinning Up Exercises" href="../rl/spinningup_exercises.html" />
+    <link rel="next" title="Catastrophic Forgetting" href="forgetting.html" />
     <link rel="prev" title="Logistic Regression" href="../ml/logistic_regression.html" /> 
 </head>
 
@@ -88,11 +88,13 @@
 <p class="caption"><span class="caption-text">Deep Learning</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Information Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forgetting.html">Catastrophic Forgetting</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Reinforcement Learning</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rl/spinningup_exercises.html">Spinning Up Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rl/comp_psych.html">Computational Psychiatry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rl/ddpg.html">Deep Deterministic Policy Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rl/spinningup_exercises.html">Spinning Up Exercises</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Etc.</span></p>
 <ul>
@@ -165,7 +167,8 @@
   <div class="section" id="information-theory">
 <h1>Information Theory<a class="headerlink" href="#information-theory" title="Permalink to this headline">¶</a></h1>
 <p>I was introduced to information theory in David McAllester’s <a class="reference external" href="https://mcallester.github.io/ttic-31230/">Fundamentals of Deep Learning class</a> (which I loved). The slides are good (but terse - you’ll need to put in some work). The problems are excellent (in my humble opinion).</p>
-<p>Chirs Olah’s <a class="reference external" href="http://colah.github.io/posts/2015-09-Visual-Information/">Visual Information Theory</a> is what made information theory “click” for me. The optimal coding interpretation of information theory, and the corresponding visualizations, were extremely helpful to my understanding.</p>
+<p>Chirs Olah’s <a class="reference external" href="http://colah.github.io/posts/2015-09-Visual-Information/">Visual Information Theory</a> is what made information theory “click” for me. The optimal coding interpretation of information theory, and the corresponding visualizations, were extremely helpful to my understanding. The following is a cheat sheet of useful intuitions about definitions in information theory.</p>
+<hr class="docutils" />
 <p><strong>Entropy.</strong> This is the average code length of the optimal code for a given probability distribution.</p>
 <div class="math notranslate nohighlight">
 \[H(p)=E_{x\sim p(x)} - \ln p(x) = \sum_{x} p(x) \cdot - \ln p(x)\]</div>
@@ -203,7 +206,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../rl/spinningup_exercises.html" class="btn btn-neutral float-right" title="Spinning Up Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="forgetting.html" class="btn btn-neutral float-right" title="Catastrophic Forgetting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../ml/logistic_regression.html" class="btn btn-neutral float-left" title="Logistic Regression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
