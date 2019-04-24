@@ -10,6 +10,8 @@ For your reading pleasure:
 - I try to arrange the quotes in a way that makes sense to me. Roughly, I try to start with "fundamental" life stuff and work my way down to day-to-day rules of thumb.
 - I acknowledge the disconcerting demographics of this page - nearly all of the quotes come from Western men. 
 
+--------
+
 **Richard Feynman, 'Feynman's Rainbow'**
 
 	I’m not going to psychoanalyse myself. Sometimes it is good to know yourself, but sometimes it isn’t. When you laugh at a joke, if you think about why laughed, you might realise that, after all, it wasn’t funny, it was silly, so you stop laughing. You shouldn’t think about it. My rule is, when you are unhappy, think about it. But when you’re happy, don’t. Why spoil it? You’re probably happy for some ridiculous reason, and you’d just spoil to know it. 
