@@ -209,5 +209,6 @@ Jumping-off Points
 - The measures of importance used in stabilisation seem applicable to model compression. Also, model compression between tasks seems like it might help alleviate catastrophic forgetting...
 - Can we explain these observations_ about Figures 3C-E?
 - The methods of parameter importance used in EWC and SI seem applicable to feature attribution. It'd be interesting to try these methods of feature attribution in combination with feature visualisation, as presented in `Building Blocks <https://distill.pub/2018/building-blocks>`_ Moreover, feature visualisation can help us better understand why XdG and stabilisation works. For instance, we can visually compare neurons with lower mean importance to neurons with higher mean importance.
+- Can gating according to importance do better?
 - Do stabilisation techniques have a relation to the replay buffer? 
 - And of course, applying gating to transfer learning...
