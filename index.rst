@@ -31,11 +31,12 @@ Welcome to Rheza's Notes!
 
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Etc.
 
     etc/about
     etc/quotes
+    etc/cookie-dough.rst
 
 
 Indices and tables
