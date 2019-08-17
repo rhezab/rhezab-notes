@@ -36,7 +36,7 @@ Welcome to Rheza's Notes!
 
     etc/about
     etc/quotes
-    etc/cookie-dough.rst
+    etc/cookie-dough
 
 
 Indices and tables
