@@ -2,7 +2,7 @@
 Cookie Dough Thoughts
 ======================
 
-I'll tend to use language that communicates certainty, but that's just beause it's easier to read (and write) writing that seems certain of itself. I am in no way certain of the truth or utility of these cookie dough thoughts. 
+This is a place to stash my unbaked thoughts. I'll tend to use language that communicates certainty, but that's just beause it's easier to read (and write) writing that seems certain of itself. I am in no way certain of the truth or utility of these cookie dough thoughts. 
 
 -----------
 
