@@ -11,7 +11,7 @@ Achievement
 
 Thinking back on my childhood, my biggest motivation was achievement. I wanted to achieve things. This may be a little surprising to those who knew me as a kid, since I was also kind of a slacker. I'm not saying I worked hard, or did lots of things. All I'm saying is that I believed the reason to do things was to achieve, whatever that means. 
 
-I was handed lots of arbitrary objectives, arbitrary in the sense that they were handed to me without satisfactory justifications. I became decent at achieving arbitrary objectives. I got pretty good grades, for instance. But achieving for the sake of achievement isn't very satisfying. 
+I was handed lots of arbitrary objectives, and I became decent at achieving arbitrary objectives. I got pretty good grades, for instance. But achieving for the sake of achievement isn't very satisfying. 
 
 I guess I'm writing this as a personal resolution to make myself more sensitive to other kinds of rewards, and not let achievement or pretention get in the way. Intrinsic rewards seem promising, rewards that are more ends than means. Rewards like curiosity, or sensual pleasure, or those derived from empathy.
 
