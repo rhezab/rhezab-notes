@@ -13,7 +13,7 @@ Thinking back on my childhood, my biggest motivation was achievement. I wanted t
 
 I was handed lots of arbitrary objectives, arbitrary in the sense that they were handed to me without satisfactory justifications. I became decent at achieving arbitrary objectives. I got pretty good grades, for instance. But achieving for the sake of achievement isn't very satisfying. 
 
-I guess I'm writing this as a personal resolution to make myself more sensitive to other kinds of rewards, and not let achievement or pretention get in the way. Intrinsic rewards, whatever that means, seem promising. Rewards like curiosity, or sensual pleasure, or those derived from empathy.
+I guess I'm writing this as a personal resolution to make myself more sensitive to other kinds of rewards, and not let achievement or pretention get in the way. Intrinsic rewards seem promising, rewards that are more ends than means. Rewards like curiosity, or sensual pleasure, or those derived from empathy.
 
 I fantasize about the following scene. It's thirty years in the future. I meet someone who reminds me of a younger version of myself. They ask me why I do x or y. I stare back at them, a little confused. I'm not sure. I stutter. Just because, I guess.
 
