@@ -2,7 +2,7 @@
 Cookie Dough Thoughts
 ======================
 
-This is a place to stash my unbaked thoughts. The way I write makes it sound like I'm sure of myself, but I write that way only beacuse it's easier to write (and read) writing that seems sure of itself. 
+This is a place to stash my unbaked thoughts. The way I write makes it sound like I'm sure of myself, but I write that way only beacuse it's easier to write (and read) writing that sounds sure of itself. 
 
 -----------
 
