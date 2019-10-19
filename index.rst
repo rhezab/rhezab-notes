@@ -8,7 +8,7 @@ Welcome to Rheza's Notes!
 
 .. toctree::
     :maxdepth: 1
-    :caption: Intro Machine Learning
+    :caption: Machine Learning
 
     ml/logistic_regression
     ml/info_theory
