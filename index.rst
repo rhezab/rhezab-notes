@@ -11,24 +11,11 @@ Welcome to Rheza's Notes!
     :caption: Intro Machine Learning
 
     ml/logistic_regression
-
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Deep Learning
-
-    dl/info_theory
-    dl/forgetting
-
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Reinforcement Learning
-
-    rl/comp_psych
-    rl/ddpg
-    rl/spinningup_exercises
-
+    ml/info_theory
+    ml/forgetting
+    ml/comp_psych
+    ml/ddpg
+    ml/spinningup_exercises
 
 .. toctree::
     :maxdepth: 2

@@ -2,15 +2,13 @@
 Quotes
 =======
 
-Here live some quotes that I want to periodically remind myself of. I don't agree with every quote per se, but I do think they contain wisdom.
-
-For your reading pleasure:
-
-- I try to distill each quote down to their essence, but punch lines often ring empty without context. If a punch line tickles you, it's probably worth looking up the context.
-- I try to arrange the quotes in a way that makes sense to me. Roughly, I try to start with "fundamental" life stuff and work my way down to day-to-day rules of thumb.
-- I acknowledge the disconcerting demographics of this page - nearly all of the quotes come from Western men.
+Here live some quotes that I want to periodically remind myself of. I don't agree with every quote per se, but I do think they contain wisdom. AI try to distill each quote down to their essence, but punch lines often ring empty without context. If a punch line tickles you, it's probably worth looking up the context.
 
 --------
+
+**Frank O'Hara, 'Having a Coke With You'**
+
+    And what good does all the research the Impressionists do them when they never got the right person to stand near the tree when the sun sank or for that matter Marino Marini when he didn't pick the rider as carefully as the horse it seems they were all cheated of some marvelous experience which is not going to go wasted on me which is why I am telling you about it
 
 **Richard Feynman, 'Feynman's Rainbow'**
 
