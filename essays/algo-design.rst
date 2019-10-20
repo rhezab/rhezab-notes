@@ -1,5 +1,5 @@
 ===========================
-Algorithmic Design
+On Algorithmic Design
 ===========================
 
 Here are my thoughts on designing things via designing algorithms, rather than directly designing the thing itself. I'm especially excited about designing optimisation processes. This is also an experiment in writing publicly. Rather than sharing a "complete" series of thoughts, I'm sharing an ongoing process of thinking about algorithmic design.
