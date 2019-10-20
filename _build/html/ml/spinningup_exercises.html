@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Spinning Up Exercises &mdash; Rheza&#39;s Notes 2019 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Algorithmic Design" href="../essays/algo-design.html" />
+    <link rel="prev" title="Deep Deterministic Policy Gradient" href="ddpg.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rheza's Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Machine Learning</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="logistic_regression.html">Logistic Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info_theory.html">Information Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forgetting.html">Catastrophic Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comp_psych.html">Computational Psychiatry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ddpg.html">Deep Deterministic Policy Gradient</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Spinning Up Exercises</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#p-set-1-basics-of-implementation">P-Set 1: Basics of Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#p-set-2-algorithm-failure-modes">P-Set 2: Algorithm Failure Modes</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Essays</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../essays/algo-design.html">Algorithmic Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Etc.</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/quotes.html">Quotes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rheza's Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Spinning Up Exercises</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ml/spinningup_exercises.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="spinning-up-exercises">
+<h1>Spinning Up Exercises<a class="headerlink" href="#spinning-up-exercises" title="Permalink to this headline">¶</a></h1>
+<p>Documenting solutions as I work through <a class="reference external" href="https://spinningup.openai.com/en/latest/spinningup/exercises.html">Open AI’s Spinning Up exercises.</a> I won’t be writing down every detail of every solution, but rather what I see as the key insights to each exercise. I couldn’t do some of the exercises without checking the solutions.</p>
+<div class="section" id="p-set-1-basics-of-implementation">
+<h2>P-Set 1: Basics of Implementation<a class="headerlink" href="#p-set-1-basics-of-implementation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-exercise-1-1-gaussian-log-likelihood admonition">
+<p class="first admonition-title">Exercise 1.1: Gaussian Log-Likelihood</p>
+<ul class="last simple">
+<li>Key is to realise that a diagonal multivariate Gaussian is just a univariate Gaussian along each component</li>
+<li>Since each component is independent, we can treat the probability of an n-dim obervation as the product of the probability of each component</li>
+<li>Calculate component-wise before summing to potentially make use of parallelism</li>
+</ul>
+</div>
+<div class="admonition-exercise-1-2-policy-for-ppo admonition">
+<p class="first admonition-title">Exercise 1.2: Policy for PPO</p>
+<ul class="last simple">
+<li>Just need to get familiar with TF API</li>
+<li>MLP solves regression problem of input state to mean action of Gaussian</li>
+</ul>
+</div>
+</div>
+<div class="section" id="p-set-2-algorithm-failure-modes">
+<h2>P-Set 2: Algorithm Failure Modes<a class="headerlink" href="#p-set-2-algorithm-failure-modes" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-exercise-2-1-value-function-fitting-in-trpo admonition">
+<p class="first admonition-title">Exercise 2.1: Value Function Fitting in TRPO</p>
+<ul class="last simple">
+<li>TRPO is an advantage-based function (advantage is how much better off you are doing action a given state s compared to the average over all possible actions a’)</li>
+<li>Therefore it makes sense that training your value-function would help TRPO do well</li>
+</ul>
+</div>
+<div class="admonition-exercise-2-2-silent-bug-in-ddpg admonition">
+<p class="first admonition-title">Exercise 2.2: Silent Bug in DDPG</p>
+<ul class="last simple">
+<li>It is a tensor shape error</li>
+<li>Should squeeze scalar-output MLPs so that they have shape [batch_size] instead of [batch_size, 1] since we’ll later be performing ops with shape [batch_size]</li>
+<li>Weird things happen when you trying adding/multiplying tensors of shape [a] with shape [a,1] (not what we want here)</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../essays/algo-design.html" class="btn btn-neutral float-right" title="Algorithmic Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ddpg.html" class="btn btn-neutral float-left" title="Deep Deterministic Policy Gradient" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Rheza Budiono
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

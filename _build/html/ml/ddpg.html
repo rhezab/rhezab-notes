@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Deep Deterministic Policy Gradient &mdash; Rheza&#39;s Notes 2019 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Spinning Up Exercises" href="spinningup_exercises.html" />
+    <link rel="prev" title="Computational Psychiatry" href="comp_psych.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Rheza's Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Machine Learning</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="logistic_regression.html">Logistic Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info_theory.html">Information Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forgetting.html">Catastrophic Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comp_psych.html">Computational Psychiatry</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deep Deterministic Policy Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spinningup_exercises.html">Spinning Up Exercises</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Essays</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../essays/algo-design.html">Algorithmic Design</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Etc.</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etc/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etc/quotes.html">Quotes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rheza's Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Deep Deterministic Policy Gradient</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ml/ddpg.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deep-deterministic-policy-gradient">
+<h1>Deep Deterministic Policy Gradient<a class="headerlink" href="#deep-deterministic-policy-gradient" title="Permalink to this headline">¶</a></h1>
+<p>Pseudo-code from <a class="reference external" href="https://spinningup.openai.com/en/latest/algorithms/ddpg.html#">Spinning Up</a>, and accompanying comments for future review. DDPG is an algorithm, specifically adapted for continous action spaces, for learning a Q-function and a corresponding deterministic policy.</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/ddpg_pseudocode.svg" src="../_images/ddpg_pseudocode.svg" /><p class="caption"><span class="caption-text">(Deep Deterministic Policy Gradient, Spinning Up, Open AI)</span></p>
+</div>
+<ul class="simple">
+<li><strong>Idea:</strong> We interleave learning a Q-function with learning a policy to “boostrap” us off the ground.</li>
+<li><strong>Line 2:</strong> Target parameters are essentially copies of previous parameters. They’re kept to prevent potential instability in the gradient update on line 13. If the “target” had the same parameters, a possible failure mode might be that we fit the “target” to our Q-function rather than the other way around.</li>
+<li><strong>Line 4:</strong> Noise is added the policy at train-time to maintain exploration</li>
+<li><strong>Line 7:</strong> We maintain a replay buffer in order to stop the Q-function from forgetting how to judge “bad” off-policy states and actions - forgetting such “bad” states can cause the policy to repeat “bad” actions.</li>
+<li><strong>Line 14:</strong> This is the line that makes DDPG specifically adapted for continous action spaces. The idea is that we want to solve <span class="math notranslate nohighlight">\(a^{*}(s) = argmax_{a} Q(s,a)\)</span> via gradient ascent since brute force search is clearly intractable for continous action spaces. But instead of doing gradient ascent everytime we want to perform an action, we train a model according to the objective  <span class="math notranslate nohighlight">\(\theta ^ * = max_{\theta} Q(s,a)\)</span>.</li>
+<li><strong>Line 15:</strong> In practice, <span class="math notranslate nohighlight">\(\rho\)</span> is often very close to 0</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="spinningup_exercises.html" class="btn btn-neutral float-right" title="Spinning Up Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="comp_psych.html" class="btn btn-neutral float-left" title="Computational Psychiatry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Rheza Budiono
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

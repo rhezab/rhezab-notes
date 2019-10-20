@@ -8,7 +8,8 @@ Here live some quotes that I want to periodically remind myself of. I don't agre
 
 **Frank O'Hara, 'Having a Coke With You'**
 
-    And what good does all the research the Impressionists do them when they never got the right person to stand near the tree when the sun sank or for that matter Marino Marini when he didn't pick the rider as carefully as the horse it seems they were all cheated of some marvelous experience which is not going to go wasted on me which is why I am telling you about it
+    ... and what good does all the research the Impressionists do them when they never got the right person to stand near the tree when the sun sank or for that matter Marino Marini when he didn't pick the rider as carefully as the horse 
+    it seems they were all cheated of some marvelous experience which is not going to go wasted on me which is why I am telling you about it
 
 **Richard Feynman, 'Feynman's Rainbow'**
 
@@ -140,15 +141,7 @@ Here live some quotes that I want to periodically remind myself of. I don't agre
 
 **David Deutsch, 'The Beginning of Infinity' (p. 24)**
 
-	That is a good explanation - hard to vary, because all its details play a functional role. For instance, we know — and can test independently of our experience of seasons — that surfaces tilted away from radiant heat are heated less than when they are facing it
-
-**David McAllester, 'Generalization and Regularization' (p. 24)**
-
-	A Model Compression Guarantee. Let :math:`|\Phi|` be the number of bits used to represent :math:`\Phi` under some fixed compression scheme.
-
-	Let :math:`P(\Phi) = 2^{- | \Phi | }`. Then:
-
-	:math:`L(\Phi) \leq \frac{10}{9} \Big( \hat{L}(\Phi) + \frac{5 L_{MAX}}{N} \Big( (ln2)|\Phi| + ln \frac{1}{\delta} \Big) \Big)`
+	That is a good explanation - hard to vary, because all its details play a functional role. For instance, we know — and can test independently of our experience of seasons — that surfaces tilted away from radiant heat are heated less than when they are facing it.
 
 **Neal King on Richard Feynman, 'How hard a worker was Richard Feynman?'**
 
@@ -162,9 +155,7 @@ Here live some quotes that I want to periodically remind myself of. I don't agre
 
 **David McAllester, 'Fundamentals of Deep Learning'**
 
-	Examples confuse me. (Mathematical abstraction can make things clear).
-
-	(Stuff inside parantheses is paraphrased).
+	Examples confuse me. Abstraction makes things clear. (Paraphrased)
 
 **Charles Townes, 'How the Laser Happenned'**
 

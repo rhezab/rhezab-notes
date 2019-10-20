@@ -8,22 +8,28 @@ Welcome to Rheza's Notes!
 
 .. toctree::
     :maxdepth: 1
-    :caption: Machine Learning
+    :caption: Notes
 
-    ml/logistic_regression
-    ml/info_theory
-    ml/forgetting
-    ml/comp_psych
-    ml/ddpg
-    ml/spinningup_exercises
+    notes/logistic_regression
+    notes/info_theory
+    notes/forgetting
+    notes/comp_psych
+    notes/ddpg
+    notes/spinningup_exercises
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
+    :caption: Essays
+
+    essays/algo-design
+
+.. toctree::
+    :maxdepth: 1
     :caption: Etc.
 
     etc/about
+    etc/projects
     etc/quotes
-    etc/cookie-dough
 
 
 Indices and tables

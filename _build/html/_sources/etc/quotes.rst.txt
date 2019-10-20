@@ -2,17 +2,17 @@
 Quotes
 =======
 
-Here live some quotes that I want to periodically remind myself of. I don't agree with every quote per se, but I do think they contain wisdom. 
+Here live some quotes that I want to periodically remind myself of. I don't agree with every quote per se, but I do think they contain wisdom. AI try to distill each quote down to their essence, but punch lines often ring empty without context. If a punch line tickles you, it's probably worth looking up the context.
 
-For your reading pleasure: 
+--------
 
-- I try to distill each quote down to their essence, but punch lines often ring empty without context. If a punch line tickles you, it's probably worth looking up the context.
-- I try to arrange the quotes in a way that makes sense to me. Roughly, I try to start with "fundamental" life stuff and work my way down to day-to-day rules of thumb.
-- I acknowledge the disconcerting demographics of this page - nearly all of the quotes come from Western men. 
+**Frank O'Hara, 'Having a Coke With You'**
+
+    And what good does all the research the Impressionists do them when they never got the right person to stand near the tree when the sun sank or for that matter Marino Marini when he didn't pick the rider as carefully as the horse it seems they were all cheated of some marvelous experience which is not going to go wasted on me which is why I am telling you about it
 
 **Richard Feynman, 'Feynman's Rainbow'**
 
-	I’m not going to psychoanalyse myself. Sometimes it is good to know yourself, but sometimes it isn’t. When you laugh at a joke, if you think about why laughed, you might realise that, after all, it wasn’t funny, it was silly, so you stop laughing. You shouldn’t think about it. My rule is, when you are unhappy, think about it. But when you’re happy, don’t. Why spoil it? You’re probably happy for some ridiculous reason, and you’d just spoil to know it. 
+	I’m not going to psychoanalyse myself. Sometimes it is good to know yourself, but sometimes it isn’t. When you laugh at a joke, if you think about why laughed, you might realise that, after all, it wasn’t funny, it was silly, so you stop laughing. You shouldn’t think about it. My rule is, when you are unhappy, think about it. But when you’re happy, don’t. Why spoil it? You’re probably happy for some ridiculous reason, and you’d just spoil to know it.
 
 **'Lady Bird'**
 
@@ -30,13 +30,13 @@ For your reading pleasure:
 
 	…
 
-	PHILOSOPHER: Imagine that you are standing on a theatre stage. If the house lights are on, you’ll probably be able to see all the way to the back of the hall. But if you’re under a bright spotlight, you won’t be able to make out even the front row. That’s exactly how it is without lives. It’s because we cast a dim light on our entire lives that we are able to see the past and the future. Or at least we imagine we can. But if one is shining a bright light on here and now, one cannot see the past or the future anymore. 
+	PHILOSOPHER: Imagine that you are standing on a theatre stage. If the house lights are on, you’ll probably be able to see all the way to the back of the hall. But if you’re under a bright spotlight, you won’t be able to make out even the front row. That’s exactly how it is without lives. It’s because we cast a dim light on our entire lives that we are able to see the past and the future. Or at least we imagine we can. But if one is shining a bright light on here and now, one cannot see the past or the future anymore.
 
-	… 
+	…
 
 	YOUTH: But that’s just living for the moment. Or worse, a vicious hedonism!
 
-	PHILOSOPHER: No. To shine a spotlight on here and now is to go about doing what one can do now, earnestly and conscientiously. 
+	PHILOSOPHER: No. To shine a spotlight on here and now is to go about doing what one can do now, earnestly and conscientiously.
 
 	…
 
@@ -44,7 +44,11 @@ For your reading pleasure:
 
 **Simone De Beauvoir, 'The Second Sex' (p. 17)**
 
-	Woman’s drama lies in this conflict between the fundamental claim of every subject, which always posits itself as essential, and the demands of a situation that constitutes her as inessential. 
+	Woman’s drama lies in this conflict between the fundamental claim of every subject, which always posits itself as essential, and the demands of a situation that constitutes her as inessential.
+
+**Mike LeFevre, interviewed in 'Working' by Studs Terkel (Preface 1)**
+
+  It's hard to take pride in a bridge you're never gonna cross, in a door you're never gonna open. You're mass-producing things and you never see the end result of it.
 
 **Immanuel Kant, 'Grounding for the Metaphysics of Morals' (p. 36)**
 
@@ -54,7 +58,7 @@ For your reading pleasure:
 
 	PHILOSOPHER: It’s about community feeling, after all. Concretely speaking, it’s making the switch from attachment to self (self-interest) to concern for others (social-interest) and gaining a sense of community feeling. Three things are needed at this point: “self-acceptance”, “confidence in others”, and “contribution to others.”
 
-**David Foster Wallace** 
+**David Foster Wallace**
 
 	The freedom to be lords of our own tiny skull-sized kingdoms, alone at the center of all creation. This kind of freedom has much to recommend it. But of course there are all different kinds of freedom, and the kind that is most precious you will not hear much talked about in the great outside world of winning and achieving and displaying. The really important kind of freedom involves attention, and awareness, and discipline, and effort, and being able truly to care about other people and to sacrifice for them, over and over, in myriad petty little unsexy ways, every day. That is real freedom. The alternative is unconsciousness, the default-setting, the ‘rat race’—the constant gnawing sense of having had and lost some infinite thing.
 
@@ -68,9 +72,9 @@ For your reading pleasure:
 
 	`(Link) <https://ttic.uchicago.edu/~kgimpel/etc/phd-advice.pdf>`_
 
-**Viktor Frankl, 'Man's Search For Meaning'** 
+**Viktor Frankl, 'Man's Search For Meaning'**
 
-	By declaring that man is responsible and must actualise the potential meaning of his life, I wish to stress that the true meaning of life is to be discovered in the world rather within man or his own psyche, as though it were a closed system... The more one forgets himself — by giving himself a cause to serve or another person to love — the more human he is and the more he actualises himself. 
+	By declaring that man is responsible and must actualise the potential meaning of his life, I wish to stress that the true meaning of life is to be discovered in the world rather within man or his own psyche, as though it were a closed system... The more one forgets himself — by giving himself a cause to serve or another person to love — the more human he is and the more he actualises himself.
 
 **C.S. Lewis, 'Mere Christianity'**
 
@@ -86,7 +90,7 @@ For your reading pleasure:
 
 	| God grant me the serenity to accept the things I cannot change,
 	| courage to change the things I can;
-	| and wisdom to know the difference. 
+	| and wisdom to know the difference.
 
 **Michael Lewis, 'The Undoing Project'**
 
@@ -106,9 +110,9 @@ For your reading pleasure:
 
 	In life, the idea is to be happy. So, I believe in calm, simple, low-profile life. You live simple, you train hard, live a honest life. Then you are free.
 
-	Only the disciplined ones are free in life. If you are undisciplined, you are a slave to your emotions and your passions. 
+	Only the disciplined ones are free in life. If you are undisciplined, you are a slave to your emotions and your passions.
 
-**Abraham Heschel** 
+**Abraham Heschel**
 
 	Our goal should be to live life in radical amazement … Get up in the morning and look at the world in a way that takes nothing for granted. Everything is phenomenal; everything is incredible; never treat life casually. To be spiritual is to be amazed.
 
@@ -118,7 +122,7 @@ For your reading pleasure:
 
 	`(Link) <https://www.quantamagazine.org/tadashi-tokieda-collects-math-and-physics-surprises-20181127/>`_
 
-**Tadashi Tokieda, 'Collects Math and Physics Surprises'** 
+**Tadashi Tokieda, 'Collects Math and Physics Surprises'**
 
 	Sometimes adults have a regrettable tendency to be interested only in things that are already labeled by other adults as interesting. Whereas if you come a little fresher, and a little more naive, you can look all over the place, whether it’s labeled or not, and find your own surprises.
 
@@ -130,7 +134,7 @@ For your reading pleasure:
 
 	The river's algorithm is simple. At each step, flow down. For the essayist this translates to: flow interesting. Of all the places to go next, choose the most interesting. One can't have quite as little foresight as a river. I always know generally what I want to write about. But not the specific conclusions I want to reach; from paragraph to paragraph I let the ideas take their course.
 
-**Steve Weinberg, 'Four Golden Lessons'** 
+**Steve Weinberg, 'Four Golden Lessons'**
 
 	When I received my undergraduate degree — about a hundred years ago — the physics literature seemed to me a vast, unexplored ocean, every part of which I had to chart before beginning any research of my own. How could I do anything without knowing everything that had already been done? Fortunately, in my first year of graduate school, I had the good luck to fall into the hands of senior physicists who insisted, over my anxious objections, that I must start doing research, and pick up what I needed to know as I went along. It was sink or swim. To my surprise, I found that this works. I managed to get a quick PhD — though when I got it I knew almost nothing about physics. But I did learn one big thing: that no one knows everything, and you don't have to.
 
@@ -140,7 +144,7 @@ For your reading pleasure:
 
 **David McAllester, 'Generalization and Regularization' (p. 24)**
 
-	A Model Compression Guarantee. Let :math:`|\Phi|` be the number of bits used to represent :math:`\Phi` under some fixed compression scheme. 
+	A Model Compression Guarantee. Let :math:`|\Phi|` be the number of bits used to represent :math:`\Phi` under some fixed compression scheme.
 
 	Let :math:`P(\Phi) = 2^{- | \Phi | }`. Then:
 
@@ -150,7 +154,7 @@ For your reading pleasure:
 
 	A colleague of Feynman's from Los Alamos told me that Feynman used to go through the Physical Review every month. For each article, he would first read the abstract, and then think about how the article should end. Then he would check the end of the paper to see if there were any surprises. If there were no surprises, he figured that he had nothing new to learn from the paper, and he'd go on to the next. But if the conclusions of the paper were different than he had guessed from his reading of the abstract, he would take the time to read and study the whole paper.
 
-	`(Link) <https://www.quora.com/How-hard-a-worker-was-Richard-Feynman/answer/Neal-King?share=f68a705f&srid=2Ens>`_ 
+	`(Link) <https://www.quora.com/How-hard-a-worker-was-Richard-Feynman/answer/Neal-King?share=f68a705f&srid=2Ens>`_
 
 **Freeman Dyson, 'No Ordinary Genius'**
 
@@ -158,15 +162,15 @@ For your reading pleasure:
 
 **David McAllester, 'Fundamentals of Deep Learning'**
 
-	Examples confuse me. (Mathematical abstraction can make things clear). 
+	Examples confuse me. (Mathematical abstraction can make things clear).
 
-	(Stuff inside parantheses is paraphrased).  
+	(Stuff inside parantheses is paraphrased).
 
 **Charles Townes, 'How the Laser Happenned'**
 
 	The late Richard Feynman, a superb physicist, said once as we talked about the laser that the way to tell a great idea is that, when people hear it, they say, 'Gee, I could have thought of that.'
 
-**Charles Townes** 
+**Charles Townes**
 
 	It's like the beaver told the rabbit as they stared at the Hoover Dam. ‘No, I didn't build it myself. But it's based on an idea of mine!’
 
@@ -176,4 +180,3 @@ For your reading pleasure:
 - `Paul Graham <http://paulgraham.com/quo.html>`_
 - `Michael Nielsen <http://mnielsen.github.io/notes/quotes/quotes.html>`_
 - `Bret Victor <http://worrydream.com/quotes/>`_
-
