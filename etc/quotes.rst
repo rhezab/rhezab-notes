@@ -8,7 +8,7 @@ Here live some quotes that I want to periodically remind myself of. I don't agre
 
 **Frank O'Hara, 'Having a Coke With You'**
 
-    ... and what good does all the research the Impressionists do them when they never got the right person to stand near the tree when the sun sank or for that matter Marino Marini when he didn't pick the rider as carefully as the horse 
+    ... and what good does all the research of the Impressionists do them when they never got the right person to stand near the tree when the sun sank or for that matter Marino Marini when he didn't pick the rider as carefully as the horse 
     it seems they were all cheated of some marvelous experience which is not going to go wasted on me which is why I am telling you about it
 
 **Richard Feynman, 'Feynman's Rainbow'**
