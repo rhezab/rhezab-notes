@@ -2,7 +2,7 @@
 Quotes
 =======
 
-Here live some quotes that I want to periodically remind myself of. I don't agree with every quote per se, but I do think they contain wisdom. AI try to distill each quote down to their essence, but punch lines often ring empty without context. If a punch line tickles you, it's probably worth looking up the context.
+Here live some quotes that I want to periodically remind myself of. I don't "agree" with each quote per se, but each quote does prompt something to think about. I try to distill each quote down to their essence, but punch lines often ring empty without context. If a punch line tickles you, it's probably worth looking up the context.
 
 --------
 
@@ -59,19 +59,23 @@ Here live some quotes that I want to periodically remind myself of. I don't agre
 
 	PHILOSOPHER: It’s about community feeling, after all. Concretely speaking, it’s making the switch from attachment to self (self-interest) to concern for others (social-interest) and gaining a sense of community feeling. Three things are needed at this point: “self-acceptance”, “confidence in others”, and “contribution to others.”
 
-**David Foster Wallace**
+**David Foster Wallace, 'This is Water'**
 
 	The freedom to be lords of our own tiny skull-sized kingdoms, alone at the center of all creation. This kind of freedom has much to recommend it. But of course there are all different kinds of freedom, and the kind that is most precious you will not hear much talked about in the great outside world of winning and achieving and displaying. The really important kind of freedom involves attention, and awareness, and discipline, and effort, and being able truly to care about other people and to sacrifice for them, over and over, in myriad petty little unsexy ways, every day. That is real freedom. The alternative is unconsciousness, the default-setting, the ‘rat race’—the constant gnawing sense of having had and lost some infinite thing.
 
-	`(Link) <https://ttic.uchicago.edu/~kgimpel/etc/phd-advice.pdf>`_
+**David Foster Wallace, 'Infinite Jest' (p. 860), via 'The Gosepel According to David Foster Wallace'**
+
+	No one single instant of it was unendurable. Here was a second right here: he endured it. What was undealable-with was the thought of all the instants all lined up and stretching ahead, glittering... He could just hunker down in the space between each heartbeat and make each heartbeat a wall and live in there. Not let his head look over. What’s unendurable is what his own head could make of it all. What his head could report to him, looking over and ahead and reporting. But he could choose not to listen; he could treat his head like G. Day or R. Lenz: clueless noise. He hadn’t quite gotten this before now, how it wasn’t just the matter of riding out the cravings for a Substance: everything unendurable was in the head, was the head not Abiding in the Present but hopping the wall and doing a recon and then returning with unendurable news you then somehow believed.
+
+**Adam Miller, 'The Gospel According to David Foster Wallace' (Ch. 7)**
+
+	Achievement can be more dangerous than failure. At least failure leaves you with the fantasy of some uppercase Substance. But imagine what happens when "you attain the goal and realize the shocking realization that attaining the goal does not complete or redeem you, does not make everything for your life OK as you are, in the culture, educated to assume" (IJ 680).
 
 **G.K. Chesterton, 'The Common Man'**
 
 	The phrase would probably be misunderstood; but I should begin my sermon by telling people not to enjoy themselves. I should tell them to enjoy dances and theatres and joy-rides and champagne and oysters; to enjoy jazz and cocktails and night-clubs if they can enjoy nothing better; to enjoy bigamy and burglary and any crime in the calendar, in preference to this other alternative; but never to learn to enjoy themselves. Human beings are happy so long as they retain the receptive power and the power of reaction in surprise and gratitude to something outside...
 
 	The moment the self within is consciously felt as something superior to any of the gifts that can be brought to it, or any of the adventures that it may enjoy, there has appeared a sort of self-devouring fastidiousness and a disenchantment in advance, which fulfils all the Tartarean emblems of thirst and of despair...
-
-	`(Link) <https://ttic.uchicago.edu/~kgimpel/etc/phd-advice.pdf>`_
 
 **Viktor Frankl, 'Man's Search For Meaning'**
 
@@ -80,8 +84,6 @@ Here live some quotes that I want to periodically remind myself of. I don't agre
 **C.S. Lewis, 'Mere Christianity'**
 
 	I wish I had got a bit further with humility myself: if I had, I could probably tell you more about the relief, the comfort, of taking the fancy-dress off—getting rid of the false self, with all its ‘Look at me’ and ‘Aren’t I a good boy?’ and all its posing and posturing. To get even near it, even for a moment, is like a drink of cold water to a man in a desert.
-
-	`(Link) <https://ttic.uchicago.edu/~kgimpel/etc/phd-advice.pdf>`_
 
 **Paul Graham, 'Life is Short'**
 
@@ -121,15 +123,11 @@ Here live some quotes that I want to periodically remind myself of. I don't agre
 
 	I don’t think I’ve had an unusual life, but it would be regarded as unusual if you take the standard sort of life people are supposed to have in a certain type of society and try to fit me in it. It’s just a matter of projection, if you see what I mean. If you project on the wrong axis, something looks very complicated. Maybe according to one projection, I have an unusual past. But I don’t think so, because I was living my life day by day in my own way. I never tried to do anything weird — it just happened this way.
 
-	`(Link) <https://www.quantamagazine.org/tadashi-tokieda-collects-math-and-physics-surprises-20181127/>`_
-
 **Tadashi Tokieda, 'Collects Math and Physics Surprises'**
 
 	Sometimes adults have a regrettable tendency to be interested only in things that are already labeled by other adults as interesting. Whereas if you come a little fresher, and a little more naive, you can look all over the place, whether it’s labeled or not, and find your own surprises.
 
 	And so that’s what you do. You just look around. And sometimes you feel tired, or you feel dizzy, or you feel preoccupied by other things, and you cannot do this. But you’re not always tired and you’re not always preoccupied. In those moments, you can find lots of wonderful things.
-
-	`(Link) <https://www.quantamagazine.org/tadashi-tokieda-collects-math-and-physics-surprises-20181127/>`_
 
 **Paul Graham, 'The Age of the Essay'**
 
@@ -143,11 +141,9 @@ Here live some quotes that I want to periodically remind myself of. I don't agre
 
 	That is a good explanation - hard to vary, because all its details play a functional role. For instance, we know — and can test independently of our experience of seasons — that surfaces tilted away from radiant heat are heated less than when they are facing it.
 
-**Neal King on Richard Feynman, 'How hard a worker was Richard Feynman?'**
+**Neal King on Richard Feynman, 'How hard a worker was Richard Feynman?' (Quora)** 
 
 	A colleague of Feynman's from Los Alamos told me that Feynman used to go through the Physical Review every month. For each article, he would first read the abstract, and then think about how the article should end. Then he would check the end of the paper to see if there were any surprises. If there were no surprises, he figured that he had nothing new to learn from the paper, and he'd go on to the next. But if the conclusions of the paper were different than he had guessed from his reading of the abstract, he would take the time to read and study the whole paper.
-
-	`(Link) <https://www.quora.com/How-hard-a-worker-was-Richard-Feynman/answer/Neal-King?share=f68a705f&srid=2Ens>`_
 
 **Freeman Dyson, 'No Ordinary Genius'**
 
