@@ -6,6 +6,10 @@ Here live some quotes that I want to periodically remind myself of. I don't "agr
 
 --------
 
+**A Zen koan**
+
+    Before enlightenment, chop wood, carry water. After enlightenment, chop wood, carry water.
+
 **Frank O'Hara, 'Having a Coke With You'**
 
     ... and what good does all the research of the Impressionists do them when they never got the right person to stand near the tree when the sun sank or for that matter Marino Marini when he didn't pick the rider as carefully as the horse 
